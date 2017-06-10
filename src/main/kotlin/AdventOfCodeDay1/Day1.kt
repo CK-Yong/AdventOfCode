@@ -1,4 +1,4 @@
-package AdventOfCode
+package AdventOfCodeDay1
 
 import java.io.File
 

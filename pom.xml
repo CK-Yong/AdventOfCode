@@ -8,7 +8,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>CKYong-Sogyo AdventOfCode</name>
+    <name>CKYong-Sogyo AdventOfCodeDay1</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
