@@ -41,7 +41,7 @@ class Day1Test {
         Assert.assertEquals(5, walker.distanceFromStart)
     }
 
-    @Test fun travelTest2(){
+    @Test fun travelTest2() {
         doTravel("R2, R2, R2")
         Assert.assertEquals(0, walker.posX)
         Assert.assertEquals(-2, walker.posY)
@@ -49,11 +49,26 @@ class Day1Test {
         Assert.assertEquals(2, walker.distanceFromStart)
     }
 
-    @Test fun travelTest3(){
+    @Test fun travelTest3() {
         doTravel("R5, L5, R5, R3")
-        Assert.assertEquals('S',walker.direction)
+        Assert.assertEquals('S', walker.direction)
         Assert.assertEquals(12, walker.distanceFromStart)
     }
 }
 
+class Day2Test {
+    var walker: Walker = Walker()
 
+    @Before fun initialize() {
+        walker.reset()
+    }
+
+    @Test fun trackTravel() {
+        walker.travel("R8, R4, R4, R8", true)
+        Assert.assertEquals(25,walker.nodeList.size)
+    }
+
+    @Test fun Day2TravelTest() {
+      //  Assert.assertEquals(4, walker.doTravelWithTracking("R8, R4, R4, R8", 2))
+    }
+}
