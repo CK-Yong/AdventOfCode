@@ -49,7 +49,6 @@ class AdvancedKeypadCracker : KeypadCracker() {
             3 -> currentNumber -= 2
             else -> currentNumber -= 4
         }
-
     }
 
     private fun moveDown() {
@@ -58,7 +57,6 @@ class AdvancedKeypadCracker : KeypadCracker() {
             1 -> currentNumber += 2
             else -> currentNumber += 4
         }
-
     }
 
     private fun mapToChar() {

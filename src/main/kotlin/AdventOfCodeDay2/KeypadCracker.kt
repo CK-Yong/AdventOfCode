@@ -8,12 +8,7 @@ import java.io.File
 open class KeypadCracker {
     protected var currentNumber: Int = 5
         protected set
-    var instructions: String = ""
     var code: String = ""
-
-    fun parseInstructions(instructions: File){
-        this.instructions = instructions.readText()
-    }
 
     open fun executeInstructions(instructions: String){
         for(char in instructions){
