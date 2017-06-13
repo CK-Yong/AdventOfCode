@@ -8,21 +8,26 @@ import java.io.File
 
 fun main(args: Array<String>) {
     val fileToRead = File("src/main/res/Day3_Input")
-    var count: Int = 0
-
     var parameterList: List<String> = fileToRead.readLines()
+    var count: Int = countValidTrianglesInList(parameterList)
+
+    println("Counted all valid triangles: $count")
+}
+
+private fun countValidTrianglesInList(parameterList: List<String>): Int {
+    var count: Int = 0
     for (parameter in parameterList) {
-        val triangleParameters = trimWhiteSpaces(parameter)
+        val triangleParameters = convertToParameterList(parameter)
         val triangle = Triangle(triangleParameters)
         if (triangle.isValidTriangle) {
             count++
         }
     }
-    println("Counted all valid triangles: $count")
+    return count
 }
 
-private fun trimWhiteSpaces(parameter: String): List<String> {
-    val triangleParameters = parameter.trim().split("    ", "   ", "  ", " ").toMutableList()
+private fun convertToParameterList(parameter: String): List<String> {
+    val triangleParameters = parameter.split("    ", "   ", "  ", " ").toMutableList()
     for (i in triangleParameters.indices) {
         triangleParameters[i] = triangleParameters[i]
     }
