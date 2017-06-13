@@ -27,7 +27,7 @@ private fun countValidTrianglesInList(parameterList: List<String>): Int {
 }
 
 private fun convertToParameterList(parameter: String): List<String> {
-    val triangleParameters = parameter.split("    ", "   ", "  ", " ").toMutableList()
+    val triangleParameters = parameter.trim().split("\\s+".toRegex()).toMutableList()
     for (i in triangleParameters.indices) {
         triangleParameters[i] = triangleParameters[i]
     }
