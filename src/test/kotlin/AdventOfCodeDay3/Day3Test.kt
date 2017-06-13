@@ -35,6 +35,6 @@ class Day3TestP1 {
 202 402 602
 203 403 603""".trim().split("[\\n]".toRegex())
 
-        assertEquals(6, triangleCounter.countVerticalTrianglesInList(rawData))
+        assertEquals(6, triangleCounter.countTrianglesInList(rawData,true))
     }
 }

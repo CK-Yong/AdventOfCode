@@ -10,6 +10,6 @@ fun main(args: Array<String>) {
 
     println("Counted all valid triangles: $count")
 
-    val countVertical: Int = triangleCounter.countVerticalTrianglesInList(parameterList)
+    val countVertical: Int = triangleCounter.countTrianglesInList(parameterList,true)
     println("Counted all vertical triangles: $countVertical")
 }
