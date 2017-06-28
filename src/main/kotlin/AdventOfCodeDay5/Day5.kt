@@ -6,5 +6,5 @@ package AdventOfCodeDay5
 fun main(args: Array<String>) {
     val puzzleInput: String = "cxdnnyjw"
     val room = RoomValidator(puzzleInput)
-    println("Password found: ${room.roomPassword}")
+    println("Password found: ${room.password}")
 }

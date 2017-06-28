@@ -5,10 +5,10 @@ import java.security.MessageDigest
 class RoomValidator(inputDoorID: String) {
     private var validHashCodes: MutableList<String> = arrayListOf()
     val doorID = inputDoorID
-    val indexList = getIndices()
-    val roomPassword = getPassword()
+    val indices = findValidIndices()
+    val password = generatePassword()
 
-    private fun getIndices(): List<Int> {
+    private fun findValidIndices(): List<Int> {
         val indices: MutableList<Int> = arrayListOf()
         var counter: Int = 0
         for (i in 0..7) {
@@ -18,7 +18,7 @@ class RoomValidator(inputDoorID: String) {
         return indices
     }
 
-    private fun getPassword(): String {
+    private fun generatePassword(): String {
         val password = StringBuilder()
         for (hash in validHashCodes) {
             password.append(hash[5].toLowerCase())
